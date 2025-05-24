@@ -2,7 +2,7 @@ FROM tensorchord/vchord-postgres:pg16-v0.3.0 AS builder
 FROM tensorchord/pgvecto-rs:pg16-v0.2.1 AS builder2
 FROM pgvector/pgvector:pg16 as builder3
 
-FROM bitnami/postgresql:16.4.0
+FROM bitnami/postgresql:17.5.0
 
 COPY --from=builder /usr/lib/postgresql/16/lib/vchord.so /opt/bitnami/postgresql/lib/
 COPY --from=builder /usr/share/postgresql/16/extension/vchord* /opt/bitnami/postgresql/share/extension/
