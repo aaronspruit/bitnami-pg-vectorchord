@@ -7,3 +7,5 @@ COPY --from=builder /usr/lib/postgresql/16/lib/vchord.so /opt/bitnami/postgresql
 COPY --from=builder /usr/share/postgresql/16/extension/vchord* /opt/bitnami/postgresql/share/extension/
 COPY --from=builder2 /usr/lib/postgresql/16/lib/vectors.so /opt/bitnami/postgresql/lib/
 COPY --from=builder2 /usr/share/postgresql/16/extension/vector* /opt/bitnami/postgresql/share/extension/
+RUN chown -R root:root /opt/bitnami/postgresql/lib/vectors.so
+RUN chown -R root:root /opt/bitnami/postgresql/share/extension/vector*
