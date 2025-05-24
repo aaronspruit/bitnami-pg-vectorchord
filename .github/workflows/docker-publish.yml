@@ -9,11 +9,8 @@ on:
   schedule:
     - cron: '39 19 * * *'
   push:
-    branches: [ "main" ]
     # Publish semver tags as releases.
     tags: [ 'pg*' ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch:
 
 env:
