@@ -35,5 +35,17 @@ primary:
         SELECT * FROM pg_extension;
 ```
 
+## Upgrading
+
+As per [Immich](https://immich.app/docs/administration/postgres-standalone#updating-vectorchord), if you're not running as superuser (by default this image will not) you need to manually run the upgrade with the following commands
+
+```sql
+ALTER EXTENSION vchord UPDATE;
+REINDEX INDEX face_index;
+REINDEX INDEX clip_index;
+```
+
+
+
 ## Additional Info
 Tag [pg16.4.0-v0.3.0](https://github.com/aaronspruit/bitnami-pg-vectorchord/tree/pg16.4.0-v0.3.0) and the subsequent [image with the same name](https://github.com/aaronspruit/bitnami-pg-vectorchord/pkgs/container/bitnami-pg-vectorchord/422950542?tag=pg16.4.0-v0.3.0) includes pgvecto.rs, pgvecto, and vectorchord which will help with migrations to 1.133.0.  Once I finished the migration, I removed pgvector.rs from the image for pg17.  However, via that tag, you can see how I was adding the required pieces.
