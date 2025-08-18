@@ -1,4 +1,4 @@
-FROM tensorchord/vchord-postgres:pg17-v0.4.3 AS builder
+FROM tensorchord/vchord-postgres:pg17-v0.5.0 AS builder
 
 FROM bitnami/postgresql:17.5.0-debian-12-r12
 
