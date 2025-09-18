@@ -1,3 +1,5 @@
+# This repo will probably be decommissioned soon due to https://github.com/bitnami/containers/issues/83267 
+
 # Bitnami Postgres images w/ VectorChord
 
 I'm using the [Bitnami postgres helm](https://github.com/bitnami/charts/blob/main/bitnami/postgresql/README.md) chart as my backing store for immich.  I'm not using the immich helm chart.  [Immich requires](https://immich.app/docs/administration/postgres-standalone/) [Vectorchord](https://docs.vectorchord.ai/) installed, which isn't part of the bitnami image.  The images built in this repo and the subseqent configs are how I get immich working.
