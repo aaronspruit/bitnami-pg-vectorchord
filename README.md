@@ -1,4 +1,4 @@
-# This repo will probably be decommissioned soon due to https://github.com/bitnami/containers/issues/83267 
+# This repo is decommissioned due to https://github.com/bitnami/containers/issues/83267 
 
 # Bitnami Postgres images w/ VectorChord
 
